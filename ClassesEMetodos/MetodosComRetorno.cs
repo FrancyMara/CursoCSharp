@@ -25,7 +25,50 @@ namespace CursoCSharp.ClassesEMetodos
             return a * b;
         }
 
+        public int Dividir (int a, int b)
+        {
+            return a / b;
         }
+
+        }
+
+     class CalculadoraCadeia
+    {
+        int memoria;
+
+
+        public CalculadoraCadeia Somar(int a)
+        {
+            memoria += a;
+            return this;
+        }
+
+        public CalculadoraCadeia Multplicar(int a)
+        {
+            memoria *= a;
+            return this;
+        }
+
+        public CalculadoraCadeia Limpar()
+        {
+            memoria = 0;
+            return this;
+        }
+
+        public CalculadoraCadeia Imprimir()
+        {
+            Console.WriteLine(memoria);
+            return this;
+        }
+
+        public int Resultado()
+        {
+            return memoria;
+        }
+            
+
+    }
+
     
 
 
@@ -40,7 +83,13 @@ namespace CursoCSharp.ClassesEMetodos
             Console.WriteLine(resultado);
             Console.WriteLine(calculadoraComum.Subitrair(2, 7));
             Console.WriteLine(calculadoraComum.Multiplicar(4, 4));
+            Console.WriteLine(calculadoraComum.Dividir(10, 2));
 
+            var calculadoraCadeia = new CalculadoraCadeia();
+            calculadoraCadeia.Somar(3).Multplicar(3).Imprimir().Limpar().Imprimir();
+
+            resultado = calculadoraCadeia.Somar(3).Multplicar(3).Resultado();
+            Console.WriteLine(resultado);
            
         }
     }
