@@ -12,7 +12,7 @@ namespace CursoCSharp.ClassesEMetodos {
         public  int Somar(int a , int b) {
             return a + b;
         }
-        //como não static é um metodo que pertence a instacia
+        //como não static é um metodo que pertence a instancia
         
         public static int Multiplicar(int a, int b) {
             return (a * b);
