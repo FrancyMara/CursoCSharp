@@ -16,18 +16,26 @@ namespace CursoCSharp.ClassesEMetodos
         {
             Nome = nome;
             Nascimento = nascimento;
-        }
 
-        public string 
+            Nascimento = new DateTime(2021, 03, 01);
+
+                   }
+
+        public string GetDataDeNascimento() {
+            return String.Format("{0}/{1}/{2}", Nascimento.Day, Nascimento.Month, Nascimento.Year);
+        }
 
     }
 
 
-    class Reandonly
+    class Readonly
     {
         static public void Executar()
         {
+            var novoCliente = new Cliente("Francy Silva", new DateTime(1991, 2, 16));
 
+            Console.WriteLine(novoCliente.Nome);
+            Console.WriteLine(novoCliente.GetDataDeNascimento()); 
         }
 
     }
