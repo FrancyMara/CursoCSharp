@@ -44,6 +44,7 @@ namespace CursoCSharp {
                {"Metodos Com Retorno - Classes e Metodos ", MetodosComRetorno.Executar},
                {"Enum - Classes e Metodos ", ExemploEnum.Executar},
                {"Struct - Classes e Metodos ", ExemploStruct.Executar},
+               {"Struct Vs Classe - Classes e Metodos ", StructVSClasse.Executar},
                
 
 
